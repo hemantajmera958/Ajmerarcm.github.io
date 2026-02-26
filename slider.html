@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RCM Products</title>
+
+<style>
+body{
+    text-align:center;
+    background:#000;
+}
+
+.slideshow img{
+    width:80%;
+    height:450px;
+}
+</style>
+
+<script>
+let i=0;
+function slideShow(){
+    let images=document.getElementsByClassName("slide");
+
+    for(let j=0;j<images.length;j++)
+        images[j].style.display="none";
+
+    i++;
+    if(i>images.length){i=1;}
+
+    images[i-1].style.display="block";
+    setTimeout(slideShow,2000);
+}
+</script>
+</head>
+
+<body onload="slideShow()">
+
+<h2 style="color:white;">RCM Product Gallery</h2>
+
+<div class="slideshow">
+<img class="slide" src="slide1.jpg">
+<img class="slide" src="slide2.jpg">
+<img class="slide" src="slide3.jpg">
+<img class="slide" src="slide4.jpg">
+<img class="slide" src="slide5.jpg">
+<img class="slide" src="slide6.jpg">
+<img class="slide" src="slide7.jpg">
+<img class="slide" src="slide8.jpg">
+<img class="slide" src="slide9.jpg">
+</div>
+
+<br>
+<a href="categories.html" style="color:white;">Next Page →</a>
+
+</body>
+</html>
